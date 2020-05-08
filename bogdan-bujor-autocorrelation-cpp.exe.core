@@ -1,0 +1,12 @@
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) exception: trapped!
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) exception: code 0xC0000005 at 0x4054F999
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) exception: ax 0x0 bx 0x246FD80 cx 0x246ED74 dx 0x419358
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) exception: si 0x0 di 0x401000 bp 0x9999999A sp 0x246FD6C
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) exception: exception is: STATUS_ACCESS_VIOLATION
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) stack: Stack trace:
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) stack: frame 0: sp = 0x246F6F8, pc = 0x6100A2C3
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) stack: frame 1: sp = 0x246F734, pc = 0x77378DA2
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) stack: frame 2: sp = 0x246F758, pc = 0x77378D74
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) stack: frame 3: sp = 0x246F824, pc = 0x77364216
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+[main] bogdan-bujor-autocorrelation-cpp 1000 (0) handle_exceptions: Error while dumping state (probably corrupted stack)
