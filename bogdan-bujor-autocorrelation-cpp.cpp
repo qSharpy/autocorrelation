@@ -3,13 +3,12 @@
 #include <fstream>
 using namespace std;
 
-void ReadDanubeSignal (double f[], int &n)
+void ReadSignal (double f[], int &n)
 {
     ifstream txt;
     double readVar = 0;
     int i = 0;
-
-    txt.open("C:\\Users\\Bogdan\\Documents\\Signal Analysis project\\.vscode\\Signal Analysis - Autocorrelation\\interest-rate\\interest-rate.txt");
+    txt.open("C:\\Users\\Bogdan\\Documents\\Signal Analysis project\\.vscode\\Signal Analysis - Autocorrelation\\nottingham-temperature\\nottingham-temperature.txt");
     while(txt>>readVar)
     {
         f[i++] = readVar;
@@ -23,11 +22,12 @@ void ReadDanubeSignal (double f[], int &n)
 void WriteSignal (double r[], int N)
 {
     ofstream txt;
-    txt.open("C:\\Users\\Bogdan\\Documents\\Signal Analysis project\\.vscode\\Signal Analysis - Autocorrelation\\interest-rate\\interest-rate-out.csv");
+    txt.open("C:\\Users\\Bogdan\\Documents\\Signal Analysis project\\.vscode\\Signal Analysis - Autocorrelation\\nottingham-temperature\\nottingham-temperature-out.csv");
 
     for(int i = 0; i<= N/2; i++)
         txt<<i+1<<","<<r[i]<<endl;
 
+    txt.close();
 }
 
 double CalculateSmallFBarred(double f[], int N, int d)
@@ -96,8 +96,8 @@ int main(void)
 {
     double f[310] = {0};
     int n = 0;
-    ReadDanubeSignal(f, n);
-    int const N = 309;
+    ReadSignal(f, n);
+    int const N = 240;
     double r[N] = {0};
     CalculateAutocorrelation(r, f, N);
     WriteSignal(r, N);
